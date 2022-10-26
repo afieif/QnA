@@ -1,0 +1,34 @@
+.body{
+    background-image: url(../../assets/signinbg.png);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Montserrat";
+}
+
+.box{
+    margin-top: 10px;
+    min-width: 300px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.21);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.text{
+    font-size: 30px;
+    line-height: 20px;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+

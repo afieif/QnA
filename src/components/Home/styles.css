@@ -1,0 +1,80 @@
+.body-h{
+    background-image: url(../../assets/signinbg.png);
+    height: 100%;
+    width: 100vw;
+    min-height: 100vh;
+    color: white;
+    font-family: "Montserrat";
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+.navbar-h{
+    width: 96vw;
+    position: fixed;
+    top: 0;
+    padding: 20px 2vw;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 2px rgba(114, 117, 117, 0.2);
+}
+
+.width-check{
+    max-width: 80vw;
+}
+
+.box-h{
+    padding: 10px;
+    min-width: 35vw;
+    max-width: 80vw;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.21);
+   
+}
+
+.listview{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.listview:last-child{
+    margin-bottom: 10px;
+}
+
+.create-question{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.tag-container{
+    display: flex;
+    max-width: 50vw;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.tag{
+    background-color: rgb(12, 12, 12);
+    border-radius: 18px;
+    padding: 5px 12.5px;
+    margin: 0px 2px 2px 0px;
+    font-size: 14px;
+}
+
+.nav-flex{
+    display: flex;
+    justify-content: space-between;
+    width: 15vw;
+}
+
+.heading{
+    font-weight: bold;
+}

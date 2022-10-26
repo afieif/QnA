@@ -1,0 +1,75 @@
+.body-q{
+    background-image: url(../../assets/signinbg.png);
+    height: 100%;
+    width: 100vw;
+    min-height: 100vh;
+    color: white;
+    font-family: "Montserrat";
+    background-attachment: fixed;
+}
+
+.by{
+    color: rgba(255, 255, 255, 0.384);
+}
+
+.navbar{
+    width: 96vw;
+    position: fixed;
+    top: 0;
+    padding: 20px 2vw;
+    background-color: black;
+    display: flex;
+    justify-content: right;
+    border-bottom: solid 2px rgba(114, 117, 117, 0.2);
+}
+
+.margin-top{
+    margin-top: 70px;
+}
+
+.box-q{
+    padding: 15px;
+    min-width: 50vw;
+    max-width: 55vw;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.21);
+    display: flex;
+    row-gap: 15px;
+    flex-direction: column;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.ans-input{
+    margin-bottom: 10px;
+}
+
+.ans-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tag-container{
+    display: flex;
+    max-width: 50vw;
+    flex-wrap: wrap;
+}
+
+.tag{
+    background-color: rgb(12, 12, 12);
+    border-radius: 18px;
+    padding: 5px 12.5px;
+    margin: 0px 2px 2px 0px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 30px;
+}
