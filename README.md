@@ -10,6 +10,7 @@ A place to gain and share knowledge
   - Add topic tags to questions
 - Post Answers to Questions
 - View your questions
+- View other questions with same tag
 
 ## Screenshots
 
