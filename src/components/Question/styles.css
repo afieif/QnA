@@ -45,6 +45,7 @@
 
 .ans-input{
     margin-bottom: 10px;
+    min-width: 65vw;
 }
 
 .ans-list{
