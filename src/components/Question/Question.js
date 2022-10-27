@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 export default function Question() {
-    const {curr} = useStore();
+    const {curr, setTag} = useStore();
     const {currentUser} = useAuth();
     const [body,setBody] = useState();
     const [answers,setAnswers] = useState([]);
@@ -80,7 +80,8 @@ export default function Question() {
     <ReactMarkdown children={curr.body}/>
     </div>
     <div className='tags-container'>
-    {curr.tags.map((i)=><span className='tag' key={i}>{i}</span>)}
+    {curr.tags.map((i)=><span className='tag' key={i} onClick={()=>{setTag(i);
+        navigate('/tag')}}>{i}</span>)}
     </div>
     </div>
     {`Posted by user: ${username(curr.user)}`}

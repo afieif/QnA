@@ -12,7 +12,7 @@ import './styles.css';
 
 export default function LoggedIn() {
     //const {logout} = useAuth();
-    const {createQuestion, getQuestions, questions, setCurr, loader} = useStore();
+    const {createQuestion, getQuestions, questions, setCurr, loader, setTag} = useStore();
     const {currentUser, logout} = useAuth();
     const [title,setTitle] = useState('');
     const [body,setBody] = useState('');
@@ -101,13 +101,14 @@ export default function LoggedIn() {
     <div className='listview'>
     {questions.map((q)=>{
       return(
-        <div className='box-h' key={q.qid} onClick={()=>{
+        <div className='box-h' key={q.qid}>
+        <div className='heading' onClick={()=>{
           setCurr(q);
           navigate('/question');
-        }}>
-        <div className='heading'>{q.title}</div>
+        }}>{q.title}</div>
         <div className='tag-container'>
-        {q.tags.map((i)=><span className='tag' key={i}>{i}</span>)}
+        {q.tags.map((i)=><span className='tag' key={i} onClick={()=>{setTag(i);
+        navigate('/tag')}}>{i}</span>)}
         </div>
       </div>
       );

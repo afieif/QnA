@@ -15,6 +15,7 @@ export function StorageProvider({children}) {
     const [questions,setQuestions] = useState([]);
     const [curr,setCurr] = useState({});
     const [loader,setLoader] = useState(false);
+    const [tag,setTag] = useState('git');
 
     async function createQuestion(title,body,tags,currentUser){
         const d = new Date();
@@ -55,7 +56,9 @@ export function StorageProvider({children}) {
         questions,
         setCurr,
         curr,
-        loader
+        loader,
+        tag,
+        setTag
     }
 
     return (

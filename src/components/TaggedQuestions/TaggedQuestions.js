@@ -3,10 +3,10 @@ import { useAuth } from '../../context/AuthContext'
 import { useStore } from '../../context/StorageContext';
 import { useNavigate } from "react-router-dom";
 
-export default function MyQuestions() {
+export default function TaggedQuestions() {
 
-    const {getQuestions, questions, setCurr, loader, setTag} = useStore();
-    const {currentUser, logout} = useAuth();
+    const {getQuestions, questions, setCurr, loader, tag, setTag} = useStore();
+    const {logout} = useAuth();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -17,15 +17,15 @@ export default function MyQuestions() {
   return (
     <div className='body-h'>
     <div className='navbar-h'>
-    <div onClick={()=>navigate('/')}> className='logo'CodePasta 🍝</div>
+    <div onClick={()=>navigate('/')} className='logo' >CodePasta 🍝</div>
     <div onClick={()=>logout()}>Logout</div>
     </div>
     <div className='feed'>
     </div>
     <div className='listview'>
-    {questions.filter((q)=>q.uid === currentUser.uid).map((q)=>{
+    {questions.filter((q)=>q.tags.includes(tag)).map((q)=>{
       return(
-        <div className='box-h' key={q.qid}>
+        <div className='box-h' key={q.qid} >
         <div className='heading' onClick={()=>{
           setCurr(q);
           navigate('/question');
@@ -41,3 +41,4 @@ export default function MyQuestions() {
     </div>
   )
 }
+

@@ -7,6 +7,8 @@ import "@fontsource/montserrat"
 import QuestionRoute from './components/QuestionRoute';
 import Question from './components/Question/Question';
 import MyQuestions from './components/MyQuestions/MyQuestions';
+import TaggedQuestions from './components/TaggedQuestions/TaggedQuestions';
+import TaggedRoute from './components/TaggedRoute';
 
 
 function App() {
@@ -19,6 +21,9 @@ function App() {
                   <Route exact path = '/my' element={<MyQuestions/>}/>
                   <Route exact path = '/question' element={<QuestionRoute/>}>
                     <Route exact path='/question' element={<Question/>}/>
+                  </Route>
+                  <Route exact path = '/tag' element={<TaggedRoute/>}>
+                    <Route exact path='/tag' element={<TaggedQuestions/>}/>
                   </Route>
                 </Route>
                 <Route path = '/signup' element={<SignIn/>}/>
