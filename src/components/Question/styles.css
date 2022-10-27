@@ -13,10 +13,10 @@
 }
 
 .navbar{
-    width: 96vw;
+    width: 100%;
     position: fixed;
     top: 0;
-    padding: 20px 2vw;
+    padding: 20px;
     background-color: black;
     display: flex;
     justify-content: right;
@@ -29,8 +29,7 @@
 
 .box-q{
     padding: 15px;
-    min-width: 50vw;
-    max-width: 55vw;
+    max-width: 90vw;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.21);
     display: flex;
@@ -73,3 +72,13 @@
     font-weight: bold;
     font-size: 30px;
 }
+
+@media only screen and (max-width: 700px) {
+    .box-q{
+        max-width: 90vw;
+        overflow: hidden;
+    }
+    .ans-input{
+        min-width: 90vw;
+    }
+  }

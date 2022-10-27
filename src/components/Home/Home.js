@@ -47,7 +47,7 @@ export default function LoggedIn() {
   return (
     <div className='body-h'>
     <div className='navbar-h'>
-    <>CodePasta 🍝</>
+    <div className='logo'>CodePasta 🍝</div>
     <div className='nav-flex'>
     <div onClick={()=>logout()}>Logout</div>
     <div onClick={()=>navigate('/my')}>My Questions</div>

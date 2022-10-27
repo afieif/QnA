@@ -70,7 +70,7 @@ export default function Question() {
   return (
     <div className='body-h'>
     <div className='navbar-h'>
-    <div onClick={()=>navigate('/')}>CodePasta 🍝</div>
+    <div onClick={()=>navigate('/')} className="logo">CodePasta 🍝</div>
     </div>
     <div className='box-q margin-top'>
     <div className='title'>

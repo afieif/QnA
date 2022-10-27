@@ -1,5 +1,7 @@
 import React, { useContext, useState , useEffect} from 'react';
-import { createUser, signIn, auth } from '../firebase';
+import { auth } from '../firebase';
+import {createUserWithEmailAndPassword,  signInWithEmailAndPassword } from "firebase/auth";
+
 
 
 
@@ -13,10 +15,51 @@ export function useAuth(){
 export function AuthProvider({children}) {
     const [currentUser,setCurrentUser] = useState();
     const [loading, setLoading] = useState(true);
+    const [error,setError]  = useState('');
 
     function logout(){
         return auth.signOut();
     }
+
+    function createUser(email,password)
+{
+    setError('');
+    createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log(user)
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    if(errorCode === 'auth/email-already-in-use')
+    {
+            signIn(email,password);
+    }
+    else
+    {
+        const errorCode = error.code;
+        setError(errorCode)
+    }
+    // ..
+  });
+}
+
+function signIn(email,password)
+{
+    signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log(user);
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    setError(errorCode);
+  });
+}
 
 
     useEffect(()=>{
@@ -34,6 +77,7 @@ export function AuthProvider({children}) {
         signIn, 
         createUser,
         logout, 
+        error
     }
 
   return (

@@ -6,14 +6,11 @@ import Alert from '@mui/material/Alert';
 import { useAuth } from '../../context/AuthContext';
 import { Navigate } from 'react-router-dom';
 
-
-
-
 export default function SignIn() {
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
   const [alert,setAlert] = useState('');
-  const { currentUser , createUser} = useAuth();
+  const { currentUser , createUser, error} = useAuth();
 
   function clearAlert()
   {
@@ -45,7 +42,7 @@ export default function SignIn() {
       <TextField label="Password" value={password} type='password' variant="filled" size='small' onChange={(e)=>setPassword(e.target.value)}/>
       <Button variant="contained" color="secondary" onClick={()=>SignInHandler()}>Sign In</Button>
       </div>
-      {alert && <Alert severity="error">{alert}</Alert>}
+      {alert && <Alert severity="error">{alert}</Alert>}{error && <Alert severity="error">{error}</Alert>}
       </>
       }
     </div>
