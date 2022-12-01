@@ -2,6 +2,7 @@
 
 A place to gain and share knowledge
 
+<a href='https://codepasta.netlify.app/'>Live Link!</a>
 ## Features
 
 - Firebase Authentication
